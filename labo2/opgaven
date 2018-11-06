@@ -1,0 +1,27 @@
+Met behulp van dynamic performance views (dpv1.sql-dpv9.sql) en 
+views voor de toegekende rechten (vtr1.sql-vtr3.sql) en views voor rollen
+en rechten (vrr1.sql-vrr7.sql) en views voor tabellen,indexen,... (vti1.sql-
+vti8.sql)  kan je hopelijk vlot de volgende vragen beantwoorden.
+
+Geef een lijst met procesnaam en procesid van uw oracleprocessen.
+In welke tabel worden er statistieken bijgehouden over de processen. Hoeveel
+user commits zijn er geregistreerd.
+Wat is de juiste naam van de control en redofiles en waar staan deze
+op disk.
+Uit hoeveel bytes bestaat een datablok.
+Hoeveel operating systeem gebruikersprocessen kunnen tegelijkertijd een
+verbinding maken met de databank.
+Hoeveel rijen bevat de dba_tab_privs tabel en hoeveel rijen gaan over uzelf.
+Welke sessie mogelijkheden heb jij gekregen.
+Welke rollen heb jij gekregen.
+In welke tabel kan je de eigenschappen van de role "student" vinden.
+Hoeveel rijen bevat de role_tab_privs tabel.
+Analyzeer uw tabellen.
+Geef van uw tabellen het aantal aanwezige rijen en de gemiddelde rijlengte
+weer. Kan je deze getallen verklaren voor de tabellen docent,lokaal,activiteit.
+Hoeveel verschillende gebruikers zijn er gekend.
+Geef informatie over uw tablespace.
+Waar worden al uw beperkingen die je tijdens uw creatie van tabellen
+opgeeft bijgehouden. Bij het bekijken van het resultaat zie je in de 3-de
+kolom de letter P,C of R staan. Verklaar deze letters.
+Geef van al uw primary_keys het b_level en het aantal leaf_blocks.

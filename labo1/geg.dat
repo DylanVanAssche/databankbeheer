@@ -1,0 +1,251 @@
+D	APH	Philips Ann	v	03/08/1960
+D	AVA	Van Assche Ado	m	16/12/1960
+D	AVH	Van Haperen An	v	29/12/1960
+D	BGI	Gielis Bart	m	31/07/1962
+D	BTA	Tanghe Bart	m	12/08/1962
+D	BVP	Van Pee Ben	m	30/10/1962
+D	CCA	Cammaert Chris	m	06/11/1962
+D	CPE	Peeters Chris	m	07/02/1963
+D	DMO	Moens David	m	06/03/1963
+D	DPA	Pauwels Danny	m	21/04/1963
+D	DVT	Van Troyen Dirk	m	14/05/1965
+D	FHE	Heylen Filip	m	08/08/1965
+D	FNA	Nauwelaerts Filip	m	07/10/1965
+D	GDS	De Samblanx Gorik	m	29/03/1966
+D	HCR	Crauwels Herman	m	21/04/1967
+D	HFA	Faes Herman	m	01/08/1967
+D	HRE	Rediers Hans	m	13/03/1968
+D	HVE	Vercammen Hugo	m	26/03/1968
+D	IVE	Verheyden Joris	m	17/12/1968
+D	JBA	Bauwens Jimmy	m	04/01/1969
+D	JDC	De Coster Jo	m	28/01/1969
+D	JDE	Derua Jan	m	23/08/1969
+D	JIV	Ivens Jan	m	23/09/1969
+D	JMA	Mangelschots Johan	m	25/12/1969
+D	JME	Meel Jan	m	04/01/1970
+D	LAP	Appels Liese	v	05/05/1971
+D	RDE	De Wil Raf	m	06/06/1970
+L	A002	oefeningen	24	n
+L	A003	oefeningen	24	n
+L	A004	oefeningen	24	n
+L	A005	oefeningen	24	n
+L	A014	hoeklessen	67	j
+L	A017	lessen	70	j
+L	A018	lessen	67	j
+L	A019	lessen	67	j
+L	A102	oefeningen	32	n
+L	A103	oefeningen	32	n
+L	A104	oefeningen	32	n
+L	A113	hoeklessen	67	j
+L	A117	wenklessen	67	j
+L	A118	tafellessen	48	j
+L	F109	massalessen	112	j
+L	F110	massalessen	112	j
+L	F113	massalessen	112	j
+L	F114	massalessen	112	j
+L	K103	basislessen	400	j
+L	K104	basislessen	255	j
+L	K107	basisoefeningen	24	j
+L	K108	basisoefeningen	24	j
+L	K111	basisoefeningen	24	j
+L	K112	basisoefeningen	24	j
+L	K113	basisoefeningen	24	j
+L	K114	basisoefeningen	24	j
+L	D019	fysica	24	j
+L	D110	analytische chemie	16	n
+L	D113	microbiologie	16	n
+L	D101	U.T. chemie	20	n
+L	D102	fysische chemie	20	n
+L	D103	industriele chemie	16	n
+L	D104	bereidingen	16	n
+L	D107	kandidaturen	24	n
+L	D108	organische chemie 8	24	n
+L	D109	organische chemie 9	24	n
+L	D128	projectlokaal	12	n
+L	A111	basiselektronica	24	j
+L	A116	elektronica Technol	24	j
+L	A202	computernetwerken	12	n
+L	A203	PC-lokaal	20	j
+L	A212	digitale technieken	24	j
+L	A213	PC-lokaal	24	j
+L	A217	HP terminal-lokaal	18	n
+L	D004	analoge technieken	20	j
+L	D006	doe-landschap	8	n
+L	D007	doe-landschap	16	j
+L	D008	microprocessoren	20	j
+L	D016	domotica	24	j
+L	D043	EMC	16	n
+L	H106	PCC	8	n
+L	A009	voorbereidingslok	20	n
+L	A010	lasonderzoek	20	n
+L	A011	microscopie	10	n
+L	A022	kunststoffen	10	n
+L	A023	warmtebehandeling	10	n
+L	A021	corrosie	10	n
+L	A110	basiselektriciteit	20	n
+L	A208	CAD	20	j
+L	A209	CAD	20	j
+L	C006	algemene metingen	14	n
+L	C014	lastechnieken	14	n
+L	C015	werktuigmachines	14	n
+L	C017	regeltechniek	18	n
+L	C018	thermotechniek	14	n
+L	C019	automatisering	14	j
+L	C106	pneumatica/hydraul	14	n
+L	D011	vermogenelektroni	16	n
+L	D012	elektrische machines	16	n
+L	D018	meettechniek en sens	20	n
+A	1000	chemie	24
+A	1010	chemie	36
+A	1020	chemie	12
+A	2040	toeg. wiskunde	18
+A	2050	toeg. wiskunde	12
+A	2055	informatietechnolog	24
+A	2057	informatietechnolog	36
+A	2425	machinecomponenten	24
+A	2430	machinecomponenten	12
+A	2431	machinecomponenten	36
+A	4010	databanken	24
+A	4020	databanken	24
+A	4265	biochemie 1	24
+A	4270	biochemie	36
+A	4050	analyt chemie 2	24
+A	4060	analyt chemie 2	36
+A	5197	ingebedde systemen	36
+A	5200	objectgericht ontw	24
+A	5210	objectgericht ontw	36
+A	5595	hardware	24
+A	5710	besturingssystemen	24
+A	5720	besturingssystemen	36
+A	5730	systeemprogr	24
+A	5740	systeemprogr	36
+A	6050	automatisering	24
+A	6060	automatisering	36
+F	1000	3	90
+F	1010	2	50
+F	1020	1	30
+F	2040	3	90
+F	2050	2	55
+F	2055	2	60
+F	2057	2	60
+F	2425	3	90
+F	2430	4	120	
+F	2431	4	120
+F	4010	3	90
+F	4020	2	50
+F	4265	3	90
+F	4270	3	90
+F	4050	3	90
+F	4060	2	60
+F	5197	4	120
+F	5200	3	90
+F	5210	3	90
+F	5595	3	90
+F	5710	3	90
+F	5720	3	90
+F	5730	4	120
+F	5740	4	120
+F	6050	3	90
+F	6060	3	90
+T	1000	RDE
+T	2040	GDS
+T	2055	HCR
+T	2425	DMO
+T	4010	HCR
+T	4265	HRE
+T	4050	AVA
+T	5200	HCR
+T	5595	FNA
+T	5710	HCR
+T	5730	HCR
+T	6050	JIV
+O	1010
+O	1020
+O	2050
+O	2057
+O	2430
+O	2431
+O	4020
+O	4270
+O	4060
+O	5197
+O	5210
+O	5720
+O	5740
+O	6060
+G	1010	CCA	4
+G	1010	LAP	6
+G	1020	CCA	4
+G	1020	LAP	6
+G	2050	JMA	7
+G	2057	AVH	3
+G	2057	APH	3
+G	2057	FNA	2
+G	2430	DMO	2
+G	2431	DMO	2
+G	4020	AVH	3
+G	4020	APH	2
+G	4270	AVA	2
+G	4060	CCA	2
+G	5197	DPA	1
+G	5210	AVH	2
+G	5720	HCR	2
+G	5720	APH	2
+G	5740	APH	2
+G	6060	DPA	4
+P	1010	D110	1
+P	2057	A213	2
+P	2431	C015	2
+P	4020	A217	1
+P	4270	D113	1
+P	4060	D113	1
+P	5197	A213	1
+P	5210	A213	1
+P	5720	A217	2
+P	5740	A217	1
+P	6060	C019	1
+B	ab1	aca bach	1	200	10	GDS	z
+B	ab2	aca bach	2	140	7	GDS	z
+B	abei3	aca bach ei	3	10	1	HCR	z
+B	abem3	aca bach em	3	30	2	JIV	m
+B	abc2	aca bach chemie	2	40	2	LAP	z
+B	abc3	aca bach chemie	3	30	2	LAP	m
+B	mei4	master ei	4	30	2	HCR	m
+M	abc3	abcp3	acbac c chemie	3	20	2
+M	abc3	abc3	acbac c biochemie	3	10	1
+M	abem3	abemem3	acbac em elektromech	3	20	1
+M	abem3	abemae3	acbac em automotive	3	10	1
+M	mei4	meie4	master eia	4	15	1
+M	mei4	meii4	master eii	4	15	1
+I	ab1	1000
+I	ab1	1010
+I	ab1	1020
+I	ab2	2040
+I	ab2	2050
+I	ab2	2055
+I	ab2	2057
+I	abem3	2425
+I	abem3	2430
+I	abem3	2431
+I	abem3	4010
+I	abc3	4010
+I	abei3	4010
+I	abem3	4020
+I	abc3	4020
+I	abei3	4020
+I	abc3	4050
+I	abc3	4060
+I	abei3	5197
+I	abei3	5200
+I	abei3	5210
+I	mei4	5595
+N	abc3	abc3	4265
+N	abc3	abc3	4270
+N	mei4	meii4	5710
+N	mei4	meii4	5720
+N	mei4	meii4	5730
+N	mei4	meii4	5740
+N	abem3	abemem3	6050
+N	abem3	abemem3	6060
+N	abc3	abcp3	6050
+N	abc3	abcp3	6060

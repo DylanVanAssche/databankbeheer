@@ -1,0 +1,26 @@
+Nadat alle tabellen en data verwijderd zijn zie je dat m.b.v. vrij.sql het
+eerste vrije bloknummer 128 is. Na het uitvoeren van crea1.sql en ladendb met
+geg1.ctl bepaal je zelf
+vanaf waar er nog vrije blokken zijn en m.b.v. extent.sql,segment.sql en 
+infseg.sql waar elke tabel met zijn key zit.
+Pas rowid.sql aan zodat je van de lokaaltabel het objectnummer kan berekenen.
+Met behulp van object.sql controleer je uw resultaat.
+Pas de analyse.sql file aan zodat je al uw tabellen kan analizeren. Noteer het
+resultaat van allalltables.sql en ga na (rowid.sql) in welke blokken de data van
+de lokaal tabel zit.
+Voer nu crepersdeel.sql uit en vul deze twee extra tabellen met 
+ladendb e_pers1.ctl en invoegdeelname.sql.
+Bepaal terug waar uw eerste vrij blok zit en verklaar
+met behulp van extent.sql en segment.sql en infseg.sql waar de tabellen en
+de data zitten. Ga ook eens kijken naar /u03/oradata/erp . Als je de e_persoon
+tabel analizeert krijg je 20 blokken te zien. Verklaar dit resultaat. Na ladendb
+van e_pers2.ctl beantwoord je terug dezelfde vragen maar nu is het aantal
+blokken wel 35 geworden.
+Hoe groot is uw .dbf file  (/u03/oradata/erp/e4??.dbf) geworden? Hoeveel extra
+blokken zijn erbij gekomen?
+Bespreek in welke volgorde oracle de databloks alloceert op basis van de
+e_persoon tabel.
+Bepaal voor de e_persoon tabel hoeveel records er in een blok gemiddeld kunnen.
+Verwijder nu de activiteit tabel. Opgelet vergeet niet purge te vragen.
+Zoek de vrijgekomen blokken op. Voeg nu een nieuwe tabel met key toe en
+bepaal welke bloknummers deze gekregen heeft.

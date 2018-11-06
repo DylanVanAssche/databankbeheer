@@ -1,0 +1,82 @@
+We gaan terug met de uurrooster databank werken. Hiervoor laden we de tabellen
+met creatie.sql en vullen de gegevens met ladendb geg.ctl.
+Het opvragen van uw aanwezige procedures,functies en triggers kan je met 
+welkepr.sql. Van triggers kan je specifiek opvragen met welketr.sql.
+
+01. Schrijf een trigger die bij het toevoegen of wijzigen aan de activiteit tabel
+nagaat of het na 12 uur is. In de voormiddag mag er niet aan gewerkt
+worden en geef je dus een foutmelding. (to_char(sysdate,'HH24'))
+Test met :insert into activiteit values (9999,'werken',24);
+
+OK
+
+02. Schrijf een trigger die bij het toevoegen of wijzigen van
+een practicalokaal in de practica tabel nagaat of de capaciteit van dat lokaal
+niet meer dan 20 bedraagt.Indien het wel meer dan 20 is geef dan een foutmelding.
+Test met :insert into practica values (2430,'A111',1); foutmelding.
+
+OK
+
+03. Schrijf een trigger die bij het toevoegen van een docent in de
+groepoefpra tabel nakijkt of die docent niet al teveel groepen
+heeft zodanig dat hij niet overwerkt geraakt. Het maximaal aantal
+groepen is bvb 10. Geef een foutmelding als je over het maximum geraakt.
+Voeg eventueel een kleiner aantal groepen dan gevraagd toe maar laat het 
+de gebruiker dan weten.
+Test met :insert into groepoefpra values (4060,'LAP',3); som is 12 gaat niet
+       insert into groepoefpra values (2057,'JMA',2); som is 7 gaat wel
+       insert into groepoefpra values(5720,'AVH',4); som is 8, 2 groep erbij wel
+       
+OK
+
+04. Schrijf een functie (bvb. lokgr) die voor een gegeven lokaalgrootte het
+aantal lokalen telt.
+Test met : select lokgr(24) as aantal from dual;
+
+OK
+
+05. Schrijf een procedure die je aanmoedigt om te werken als het moment van de
+dag tussen 8u en 18u ligt en als het geen zaterdag of zondag is. In het andere
+geval geef je een foutmelding.
+Test met : exec <NaamVanUwProcedure>
+
+OK
+
+06. Schrijf een procedure die de theorieactiviteitsnamen afdrukt voor een gegeven
+docentafkorting.
+
+OK
+
+07. Schrijf een procedure die voor een gegeven docentafkorting de opleidingen
+geeft waar de docent theorie geeft. 
+
+OK
+
+08. Schrijf een procedure die, gebruikmakend van de voorgaande procedure
+voor alle docenten de bijhorende opleidingen geeft.
+
+OK
+
+09. Schrijf een procedure die voor een gegeven opleiding de totale som geeft
+van het aantal semestercontacturen als out argument.Vergeet de bijhorende
+minoren niet.
+
+OK
+
+10. Maak een tabel met 2 velden,1 van type char(8) voor bafk en 1 integer voor
+semesteruren. Schrijf nu een procedure die voor alle opleidingen de totale som
+geeft van het aantal semestercontacturen.Vergeet de bijhorende minoren niet.
+Voeg deze tussenresultaten toe in uw gemaakte tabel. 
+
+CREATE TABLE appelmans(
+	bafk char(8),
+	ascu int
+	);
+	
+OK
+
+11. Verwijder uw fiche tabel, zodat je aan een publiek gemaakte fiche tabel kan.
+Schrijf een procedure die voor een gegeven woord het fid en de hele inhoud(finh)
+laat zien waar dit woord in voorkomt.
+
+OK

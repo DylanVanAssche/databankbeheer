@@ -1,0 +1,231 @@
+
+SQL*Loader: Release 12.1.0.2.0 - Production on Tue Oct 16 14:19:57 2018
+
+Copyright (c) 1982, 2014, Oracle and/or its affiliates.  All rights reserved.
+
+Control File:   geg.ctl
+Data File:      geg.dat
+  Bad File:     geg.bad
+  Discard File:  none specified
+ 
+ (Allow all discards)
+
+Number to load: ALL
+Number to skip: 0
+Errors allowed: 50
+Bind array:     64 rows, maximum of 256000 bytes
+Continuation:    none specified
+Path used:      Conventional
+
+Table DOCENT, loaded when 1:1 = 0X44(character 'D')
+Insert option in effect for this table: INSERT
+
+   Column Name                  Position   Len  Term Encl Datatype
+------------------------------ ---------- ----- ---- ---- ---------------------
+DAFK                                    3     *  WHT      CHARACTER            
+DNAAM                                NEXT     *  WHT      CHARACTER            
+DGESLACHT                            NEXT     *  WHT      CHARACTER            
+DGBD                                 NEXT     *  WHT      DATE DD/MM/YYYY      
+
+Table LOKAAL, loaded when 1:1 = 0X4c(character 'L')
+Insert option in effect for this table: INSERT
+
+   Column Name                  Position   Len  Term Encl Datatype
+------------------------------ ---------- ----- ---- ---- ---------------------
+LID                                     3     *  WHT      CHARACTER            
+LNAAM                                NEXT     *  WHT      CHARACTER            
+LCAPA                                NEXT     *  WHT      CHARACTER            
+LBEAMER                              NEXT     *  WHT      CHARACTER            
+
+Table ACTIVITEIT, loaded when 1:1 = 0X41(character 'A')
+Insert option in effect for this table: INSERT
+
+   Column Name                  Position   Len  Term Encl Datatype
+------------------------------ ---------- ----- ---- ---- ---------------------
+AID                                     3     *  WHT      CHARACTER            
+ANAAM                                NEXT     *  WHT      CHARACTER            
+ASCU                                 NEXT     *  WHT      CHARACTER            
+
+Table FICHE, loaded when 1:1 = 0X46(character 'F')
+Insert option in effect for this table: INSERT
+
+   Column Name                  Position   Len  Term Encl Datatype
+------------------------------ ---------- ----- ---- ---- ---------------------
+FID                                     3     *  WHT      CHARACTER            
+FSTP                                 NEXT     *  WHT      CHARACTER            
+FSLU                                 NEXT     *  WHT      CHARACTER            
+
+Table THEORIE, loaded when 1:1 = 0X54(character 'T')
+Insert option in effect for this table: INSERT
+
+   Column Name                  Position   Len  Term Encl Datatype
+------------------------------ ---------- ----- ---- ---- ---------------------
+TAID                                    3     *  WHT      CHARACTER            
+TDAFK                                NEXT     *  WHT      CHARACTER            
+
+Table OEFPRA, loaded when 1:1 = 0X4f(character 'O')
+Insert option in effect for this table: INSERT
+
+   Column Name                  Position   Len  Term Encl Datatype
+------------------------------ ---------- ----- ---- ---- ---------------------
+OAID                                    3     *  WHT      CHARACTER            
+
+Table GROEPOEFPRA, loaded when 1:1 = 0X47(character 'G')
+Insert option in effect for this table: INSERT
+
+   Column Name                  Position   Len  Term Encl Datatype
+------------------------------ ---------- ----- ---- ---- ---------------------
+AID                                     3     *  WHT      CHARACTER            
+DAFK                                 NEXT     *  WHT      CHARACTER            
+AANT                                 NEXT     *  WHT      CHARACTER            
+
+Table PRACTICA, loaded when 1:1 = 0X50(character 'P')
+Insert option in effect for this table: INSERT
+
+   Column Name                  Position   Len  Term Encl Datatype
+------------------------------ ---------- ----- ---- ---- ---------------------
+PAID                                    3     *  WHT      CHARACTER            
+PLID                                 NEXT     *  WHT      CHARACTER            
+PADOC                                NEXT     *  WHT      CHARACTER            
+
+Table BASIS, loaded when 1:1 = 0X42(character 'B')
+Insert option in effect for this table: INSERT
+
+   Column Name                  Position   Len  Term Encl Datatype
+------------------------------ ---------- ----- ---- ---- ---------------------
+BAFK                                    3     *  WHT      CHARACTER            
+BNAAM                                NEXT     *  WHT      CHARACTER            
+BFASE                                NEXT     *  WHT      CHARACTER            
+BASTD                                NEXT     *  WHT      CHARACTER            
+BAGRP                                NEXT     *  WHT      CHARACTER            
+BPC                                  NEXT     *  WHT      CHARACTER            
+BSOORT                               NEXT     *  WHT      CHARACTER            
+
+Table MINOR, loaded when 1:1 = 0X4d(character 'M')
+Insert option in effect for this table: INSERT
+
+   Column Name                  Position   Len  Term Encl Datatype
+------------------------------ ---------- ----- ---- ---- ---------------------
+BAFK                                    3     *  WHT      CHARACTER            
+MAFK                                 NEXT     *  WHT      CHARACTER            
+MNAAM                                NEXT     *  WHT      CHARACTER            
+MFASE                                NEXT     *  WHT      CHARACTER            
+MASTD                                NEXT     *  WHT      CHARACTER            
+MAGRP                                NEXT     *  WHT      CHARACTER            
+
+Table BASISACT, loaded when 1:1 = 0X49(character 'I')
+Insert option in effect for this table: INSERT
+
+   Column Name                  Position   Len  Term Encl Datatype
+------------------------------ ---------- ----- ---- ---- ---------------------
+BAFK                                    3     *  WHT      CHARACTER            
+AID                                  NEXT     *  WHT      CHARACTER            
+
+Table MINORACT, loaded when 1:1 = 0X4e(character 'N')
+Insert option in effect for this table: INSERT
+
+   Column Name                  Position   Len  Term Encl Datatype
+------------------------------ ---------- ----- ---- ---- ---------------------
+BAFK                                    3     *  WHT      CHARACTER            
+MAFK                                 NEXT     *  WHT      CHARACTER            
+AID                                  NEXT     *  WHT      CHARACTER            
+
+value used for ROWS parameter changed from 64 to 24
+
+Table DOCENT:
+  27 Rows successfully loaded.
+  0 Rows not loaded due to data errors.
+  224 Rows not loaded because all WHEN clauses were failed.
+  0 Rows not loaded because all fields were null.
+
+
+Table LOKAAL:
+  70 Rows successfully loaded.
+  0 Rows not loaded due to data errors.
+  181 Rows not loaded because all WHEN clauses were failed.
+  0 Rows not loaded because all fields were null.
+
+
+Table ACTIVITEIT:
+  26 Rows successfully loaded.
+  0 Rows not loaded due to data errors.
+  225 Rows not loaded because all WHEN clauses were failed.
+  0 Rows not loaded because all fields were null.
+
+
+Table FICHE:
+  26 Rows successfully loaded.
+  0 Rows not loaded due to data errors.
+  225 Rows not loaded because all WHEN clauses were failed.
+  0 Rows not loaded because all fields were null.
+
+
+Table THEORIE:
+  12 Rows successfully loaded.
+  0 Rows not loaded due to data errors.
+  239 Rows not loaded because all WHEN clauses were failed.
+  0 Rows not loaded because all fields were null.
+
+
+Table OEFPRA:
+  14 Rows successfully loaded.
+  0 Rows not loaded due to data errors.
+  237 Rows not loaded because all WHEN clauses were failed.
+  0 Rows not loaded because all fields were null.
+
+
+Table GROEPOEFPRA:
+  20 Rows successfully loaded.
+  0 Rows not loaded due to data errors.
+  231 Rows not loaded because all WHEN clauses were failed.
+  0 Rows not loaded because all fields were null.
+
+
+Table PRACTICA:
+  11 Rows successfully loaded.
+  0 Rows not loaded due to data errors.
+  240 Rows not loaded because all WHEN clauses were failed.
+  0 Rows not loaded because all fields were null.
+
+
+Table BASIS:
+  7 Rows successfully loaded.
+  0 Rows not loaded due to data errors.
+  244 Rows not loaded because all WHEN clauses were failed.
+  0 Rows not loaded because all fields were null.
+
+
+Table MINOR:
+  6 Rows successfully loaded.
+  0 Rows not loaded due to data errors.
+  245 Rows not loaded because all WHEN clauses were failed.
+  0 Rows not loaded because all fields were null.
+
+
+Table BASISACT:
+  22 Rows successfully loaded.
+  0 Rows not loaded due to data errors.
+  229 Rows not loaded because all WHEN clauses were failed.
+  0 Rows not loaded because all fields were null.
+
+
+Table MINORACT:
+  10 Rows successfully loaded.
+  0 Rows not loaded due to data errors.
+  241 Rows not loaded because all WHEN clauses were failed.
+  0 Rows not loaded because all fields were null.
+
+
+Space allocated for bind array:                 253872 bytes(24 rows)
+Read   buffer bytes: 1048576
+
+Total logical records skipped:          0
+Total logical records read:           251
+Total logical records rejected:         0
+Total logical records discarded:        0
+
+Run began on Tue Oct 16 14:19:57 2018
+Run ended on Tue Oct 16 14:19:57 2018
+
+Elapsed time was:     00:00:00.60
+CPU time was:         00:00:00.04

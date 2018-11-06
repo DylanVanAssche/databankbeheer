@@ -1,0 +1,27 @@
+De informatie voor creatie van een DB vind je in volgende dir:
+/u01/app/oracle/admin/erp/scripts.
+In welk bestand vind je info over waar de redofiles op het systeem komen en
+hoe groot deze gemaakt worden.
+In welk bestand vind je info over waar de controlfiles op het systeem komen.
+Noteer voor enkele oracle processen (checkpointwriter,logfilewriter en
+de databasewriter )de reeds gebruikte cpu tijden.
+Kies er nog zelf een proces uit en leg uit waarvoor dat dient.
+We gaan nu een paar tabellen maken met creatie.sql en de tabellen vullen met
+informatie met het unix-commando ladendb geg.ctl.
+Graag een verslagje van uw ervaringen met grant en revoke.
+Als je @privs uitvoert merk je dat er geen rijen in de user_tab_privs tabel
+zitten.
+Als je een tabel van iemand anders wilt raadplegen lukt dat niet zolang
+de andere u geen toelating heeft gegeven.
+select * from e4??.docent lukt bvb. niet.
+Uw buurman moet u toelating geven om select te doen. Hij kan die
+toelating alleen aan u geven of aan iedereen.
+Bekijk nu de user_tab_privs tabel en zie of de select lukt.
+Probeer nu bij uw buur een update op een andere tabel bvb lokaal. Vraag
+eventueel de toelating indien nodig. Kan jij uw update bekijken of
+heb je nog een toelating nodig.Wanneer merkt uw buur uw update?
+Probeer nu bij uw buur een delete (bvb op de practica tabel) uit te voeren.
+Bekijk regelmatig de user_tab_privs tabel.
+Neem nu alle rechten die je aan uw buur en de rest van de wereld
+hebt toegekend af zodat de user_tab_privs tabel terug leeg is.
+

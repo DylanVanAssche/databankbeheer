@@ -1,0 +1,226 @@
+Met behulp van dynamic performance views (dpv1.sql-dpv9.sql) en 
+views voor de toegekende rechten (vtr1.sql-vtr3.sql) en views voor rollen
+en rechten (vrr1.sql-vrr7.sql) en views voor tabellen,indexen,... (vti1.sql-
+vti8.sql)  kan je hopelijk vlot de volgende vragen beantwoorden.
+
+1. Geef een lijst met procesnaam en procesid van uw oracleprocessen.
+
+@dpv2
+
+       SID USER PROGRAM                                       PROCESS
+---------- ---- --------------------------------------------- --------------
+         1      oracle@laurel (VKTM)                          3841
+         2      oracle@laurel (DIAG)                          3849
+
+2. In welke tabel worden er statistieken bijgehouden over de processen.
+@dpv3
+v$session
+
+3. Hoeveel user commits zijn er geregistreerd.
+@dpv3
+6 user commits                       1      25973  582481098          0
+
+4. Wat is de juiste naam van de control en redofiles en waar staan deze
+op disk.
+
+@dpv5
+@dpv6
+/u03/oradata/erp/control01.ctl
+/u03/oradata/erp/control02.ctl
+/u03/oradata/erp/redo03.log
+/u03/oradata/erp/redo02.log
+/u03/oradata/erp/redo01.log
+
+5. Uit hoeveel bytes bestaat een datablok.
+@dpv8
+8192
+
+6. Hoeveel operating systeem gebruikersprocessen kunnen tegelijkertijd een
+verbinding maken met de databank.
+@dpv9
+300
+
+7. Hoeveel rijen bevat de dba_tab_privs tabel en hoeveel rijen gaan over uzelf.
+@vtr1
+45120 rows selected.
+
+GRANTEE    OWNER   TABLE_NA GRANTOR  PRIVILEGE          GRA HIE COM TYPE
+---------- ------- -------- -------- ------------------ --- --- --- ------
+PUBLIC     SYS     E402     E402     INHERIT PRIVILEGES NO  NO  NO  USER
+
+8. Welke sessie mogelijkheden heb jij gekregen.
+SQL> @vtr3
+
+PRIVILEGE
+--------------------
+CREATE TRIGGER
+CREATE PROCEDURE
+CREATE SEQUENCE
+CREATE VIEW
+CREATE TABLE
+CREATE SESSION
+
+6 rows selected.
+
+9. Welke rollen heb jij gekregen.
+
+USERNAME   GRANTED_ROLE           ADM DEL DEF OS_ COM
+---------- ---------------------- --- --- --- --- ---
+E402       SELECT_CATALOG_ROLE    NO  NO  YES NO  NO => v$ tabellen
+E402       STUDENT                NO  NO  YES NO  NO
+
+10. In welke tabel kan je de eigenschappen van de role "student" vinden.
+@vrr6
+role_sys_privs
+
+11. Hoeveel rijen bevat de role_tab_privs tabel.
+@vrr7
+3694 rows selected.
+
+12. Analyzeer uw tabellen.
+Geef van uw tabellen het aantal aanwezige rijen en de gemiddelde rijlengte
+weer. 
+
+@vti1
+
+TABLE_NAME         BLOCKS   NUM_ROWS AVG_ROW_LEN ANALYZED
+-------------- ---------- ---------- ----------- ------------
+THEORIE                 5         12          11 02/10//14:54
+PRACTICA                5         11          16 02/10//14:54
+OEFPRA                  5         14           7 02/10//14:54
+MINORACT                5         10          25 02/10//14:54
+MINOR                   5          6          46 02/10//14:54
+LOKAAL                  5         70          28 02/10//14:54
+GROEPOEFPRA             5         20          14 02/10//14:54
+FICHE                   5         26          15 02/10//14:54
+DOCENT                  5         29          30 02/10//14:54
+BASISACT                5         22          16 02/10//14:54
+BASIS                   5          7          39 02/10//14:54
+
+TABLE_NAME         BLOCKS   NUM_ROWS AVG_ROW_LEN ANALYZED
+-------------- ---------- ---------- ----------- ------------
+ACTIVITEIT              5         26          25 02/10//14:54
+
+12 rows selected.
+
+13. Kan je deze getallen verklaren voor de tabellen docent,lokaal,activiteit.
+
+HEADER = 3 bytes
+Elk veld 1 byte extra voor de lengte, tenzij de lengte > 255
+
+=> DOCENT tabel
+DAFK = 3
+DNAAM = 12,2413793
+DGESLACHT = 1
+DGBD = 8
+4*LENGTE FIELD = 4
+HEADER = 3
++-------------------
+TOTAAL = 31,2413793 is ongeveer de grootte van DOCENT tabel (30 bytes)
+
+=> LOKAAL tabel
+LID = 5
+LNAAM = 12,6285714
+LCAPA = 2,05714286
+LBEAMER = 1
+4*LENGTE FIELD = 4
+HEADER = 3
++-------------------
+TOTAAL = 27 bytes is ongeveer 28 bytes voor LOKAAL tabel
+
+14. Hoeveel verschillende gebruikers zijn er gekend.
+@vti2
+199 rows selected.
+
+15. Geef informatie over uw tablespace.
+
+TABLESPACE_NAME BLOCK_SIZE INITIAL_EXTENT NEXT_EXTENT MIN_EXTENTS MAX_EXTENTS
+--------------- ---------- -------------- ----------- ----------- -----------
+  MAX_SIZE PCT_INCREASE MIN_EXTLEN STATUS    CONTENTS  LOGGING   FOR EXTENT_MAN
+---------- ------------ ---------- --------- --------- --------- --- ----------
+ALLOCATIO PLU SEGMEN DEF_TAB_ RETENTION   BIG PREDICA ENC
+--------- --- ------ -------- ----------- --- ------- ---
+COMPRESS_FOR                   DEF_INME DEF_INME DEF_INMEMORY_DI
+------------------------------ -------- -------- ---------------
+DEF_INMEMORY_COMP DEF_INMEMORY_
+----------------- -------------
+E400                  8192          65536                       1  2147483645
+2147483645                   65536 ONLINE    PERMANENT NOLOGGING NO  LOCAL
+SYSTEM    NO  AUTO   DISABLED NOT APPLY   NO  HOST    NO
+                               DISABLED
+
+16. Waar worden al uw beperkingen die je tijdens uw creatie van tabellen
+opgeeft bijgehouden. Bij het bekijken van het resultaat zie je in de 3-de
+kolom de letter P,C of R staan. Verklaar deze letters.
+
+@vti5 
+
+OWNER  CONSTRAINT_NAME  C TABLE_NAME  R_OWNER
+------ ---------------- - ----------- ----------
+E402   REFBD            R BASIS       E402
+E402   REFGD            R GROEPOEFPRA E402
+E402   REFTD            R THEORIE     E402
+E402   REFPL            R PRACTICA    E402
+E402   REFMAA           R MINORACT    E402
+E402   REFBAA           R BASISACT    E402
+E402   REFOA            R OEFPRA      E402
+E402   REFTA            R THEORIE     E402
+E402   REFFA            R FICHE       E402
+E402   REFPO            R PRACTICA    E402
+E402   REFGO            R GROEPOEFPRA E402
+E402   REFBAB           R BASISACT    E402
+E402   REFMB            R MINOR       E402
+E402   SYS_C0010441     R MINORACT    E402
+E402   MINORACT_PK      P MINORACT
+E402   BASISACT_PK      P BASISACT
+E402   MINOR_PK         P MINOR
+E402   SYS_C0010433     C MINOR
+E402   SYS_C0010432     C MINOR
+E402   SYS_C0010431     C MINOR
+E402   BASIS_PK         P BASIS
+E402   SYS_C0010428     C BASIS
+E402   SYS_C0010427     C BASIS
+E402   SYS_C0010426     C BASIS
+E402   SYS_C0010425     C BASIS
+E402   PRACTICA_PK      P PRACTICA
+E402   SYS_C0010421     C PRACTICA
+E402   GROEPOEFPRA_PK   P GROEPOEFPRA
+E402   SYS_C0010417     C GROEPOEFPRA
+E402   OEFPRA_PK        P OEFPRA
+E402   THEORIE_PK       P THEORIE
+E402   FICHE_PK         P FICHE
+E402   SYS_C0010409     C FICHE
+E402   SYS_C0010408     C FICHE
+E402   SYS_C0010407     C FICHE
+E402   ACTIVITEIT_PK    P ACTIVITEIT
+E402   SYS_C0010405     C ACTIVITEIT
+E402   LOKAAL_PK        P LOKAAL
+E402   SYS_C0010403     C LOKAAL
+E402   SYS_C0010402     C LOKAAL
+E402   DOCENT_PK        P DOCENT
+E402   SYS_C0010400     C DOCENT
+E402   SYS_C0010399     C DOCENT
+
+43 rows selected.
+
+P= Primary key
+R= Foreign key (reference)
+C= Constrain
+
+17. Geef van al uw primary_keys het b_level en het aantal leaf_blocks.
+@vti6
+INDEX_NAME                TABLE_NAME          BLEVEL LEAF_BLOCKS
+------------------------- --------------- ---------- -----------
+ACTIVITEIT_PK             ACTIVITEIT               0           1
+BASISACT_PK               BASISACT                 0           1
+BASIS_PK                  BASIS                    0           1
+DOCENT_PK                 DOCENT                   0           1
+FICHE_PK                  FICHE                    0           1
+GROEPOEFPRA_PK            GROEPOEFPRA              0           1
+LOKAAL_PK                 LOKAAL                   0           1
+MINORACT_PK               MINORACT                 0           1
+MINOR_PK                  MINOR                    0           1
+OEFPRA_PK                 OEFPRA                   0           1
+PRACTICA_PK               PRACTICA                 0           1
+SYS_IL0000093249C00003$$  FICHE
+THEORIE_PK                THEORIE                  0           1
